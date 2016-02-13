@@ -23,9 +23,10 @@ public class Main {
     
        //setting up the components of the main screen
        JFrame     frame  =  new JFrame("Search Engine!!");
-       JTextField txtBox =  new JTextField();    
+       JTextArea txtBox =  new JTextArea();    
        JLabel     search   =  new JLabel("Search Terms: ");
        frame.setSize(650, 500);
+       
        JLabel  TITLE   =  new JLabel("Search Engine");
        
        //setting panels up
@@ -39,22 +40,11 @@ public class Main {
        
        //adding components to the north panel
        main.add(NORTH, BorderLayout.NORTH); 
-       JPanel NS = new JPanel(new BorderLayout());
-       NORTH.add(search, BorderLayout.NORTH);
-       NORTH.add(NS);
-       txtBox.setSize(200, 20);
-       NS.add(txtBox, BorderLayout.SOUTH);
-     
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
+       NORTH.setPreferredSize(new Dimension(200, 100));
+       NORTH.add(TITLE, BorderLayout.NORTH);
+       NORTH.add(search, BorderLayout.CENTER);
+       txtBox.setPreferredSize(new Dimension(150, 15));
+       NORTH.add(txtBox);
        
        //adding components to south of the main panel
        main.add(SOUTH, BorderLayout.SOUTH);
