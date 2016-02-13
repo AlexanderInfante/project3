@@ -38,12 +38,23 @@ public class Main {
        main.setBackground(Color.white);
        
        //adding components to the north panel
-       main.add(NORTH, BorderLayout.NORTH);
-       NORTH.add(TITLE);
-       NORTH.add(search, BorderLayout.SOUTH);
+       main.add(NORTH, BorderLayout.NORTH); 
+       JPanel NS = new JPanel(new BorderLayout());
+       NORTH.add(search, BorderLayout.NORTH);
+       NORTH.add(NS);
        txtBox.setSize(200, 20);
-       NORTH.add(txtBox, BorderLayout.SOUTH);
+       NS.add(txtBox, BorderLayout.SOUTH);
      
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
        
        //adding components to south of the main panel
        main.add(SOUTH, BorderLayout.SOUTH);
