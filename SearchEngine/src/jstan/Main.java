@@ -5,9 +5,13 @@
  */
 package jstan;
 
+import javax.swing.*;
+import java.awt.*;
+
+
 /**
  *
- * @author Jonathan
+ * @author Alexander
  */
 public class Main {
 
@@ -15,7 +19,52 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-    }
+        
     
-}
+       //setting up the components of the main screen
+       JFrame     frame  =  new JFrame("Search Engine!!");
+       JTextField txtBox =  new JTextField();    
+       JLabel     search   =  new JLabel("Search Terms: ");
+       frame.setSize(650, 500);
+       JLabel  TITLE   =  new JLabel("Search Engine");
+       
+       //setting panels up
+       JPanel main  = new JPanel(new BorderLayout()); 
+       JPanel NORTH = new JPanel();
+       JPanel SOUTH = new JPanel();
+       
+       //adding main panel to frame
+       frame.add(main);
+       main.setBackground(Color.white);
+       
+       //adding components to the north panel
+       main.add(NORTH, BorderLayout.NORTH);
+       NORTH.add(TITLE);
+       NORTH.add(search, BorderLayout.SOUTH);
+       txtBox.setSize(200, 20);
+       NORTH.add(txtBox, BorderLayout.SOUTH);
+     
+       
+       //adding components to south of the main panel
+       main.add(SOUTH, BorderLayout.SOUTH);
+       JPanel SW  = new JPanel();      
+       SOUTH.add(SW);
+       
+       JButton maintenance = new JButton("Maintenance...");
+       maintenance.setSize(50, 20);
+       SW.add(maintenance, BorderLayout.WEST);
+       
+       JLabel numOfIndex = new JLabel("Number of files Indexed: ");
+       numOfIndex.setSize(50, 20);
+       SW.add(numOfIndex, BorderLayout.CENTER);
+
+       JButton about       = new JButton("About...");
+       about.setLocation(640, 480);
+       SOUTH.add(about, BorderLayout.WEST);
+       
+       frame.setVisible(true);
+        
+       }
+    }
+
+
