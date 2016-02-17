@@ -88,7 +88,7 @@ public class Main {
        SC.add(numOfIndex); 
        SE.add(about);
 
-       
+       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//stops app on exit
        frame.setVisible(true);
         
        }
